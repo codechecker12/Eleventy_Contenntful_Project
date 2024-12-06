@@ -1,0 +1,22 @@
+---
+title: "Popular Travel Destinations"
+layout: "layout/default.liquid"
+---
+<h1>Travel Destinations</h1>
+<p> StayTuned, I will Post here Shortly! </p>
+<ul>
+  {% for destination in collections.destinations %}
+    <li>
+      <h2>{{ destination.name }}</h2>
+      <img src="{{ destination.image }}" alt="{{ destination.name }}">
+      <p>{{ destination.description }}</p>
+      <h3>Top Attractions:</h3>
+      <ul>
+        {% for attraction in destination.topAttractions %}
+          <li>{{ attraction }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+<link rel="stylesheet" href="/css/style.css">

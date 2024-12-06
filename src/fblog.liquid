@@ -1,0 +1,42 @@
+---
+layout: "layout/default.liquid"
+permalink: "/fblog/{{ blogPage.slug }}/index.html"
+pagination:
+  data: posts 
+  size: 1
+  alias: blogPage
+  filter: "{{ blogPage.slug }}" 
+---
+
+<div class="blog-post">
+  <h1>{{ blogPage.title }}</h1>
+
+  {% if blogPage.image %}
+    <img src="{{ blogPage.image }}" alt="{{ blogPage.title }}">
+  {% else %}
+    <p>No image available</p>
+  {% endif %}
+
+  <div class="content">
+    {{ blogPage.content  }} 
+  </div>
+</div>
+
+
+<div class="pagination-buttons">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="btn btn-primary">Previous</a>
+  {% endif %}
+
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="btn btn-primary">Next</a>
+  {% endif %}
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+---
+pagination:
+    data: my
+    size: 1
+    alias: my
+
+layout: "layout/default.liquid"
+permalink: "about/page/{{ pagination.pageNumber }}/index.html"
+---
+    
+<div>
+    <h1>
+        About Page
+    </h1>
+        <div class="blog-card">
+        {% for my in my %}
+            <div class="post-card">
+            <h2>{{ my.title }}</h2>
+            
+            <p>{{ my.content }}</p>
+            
+            </div>
+        {% endfor %}
+        </div>
+</div>
+    
+
+<div class="pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">Previous</a>
+  {% else %}
+    <span>Previous</span> 
+  {% endif %}
+  |
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next</a>
+  {% else %}
+    <span>Next</span> 
+  {% endif %}
+</div>

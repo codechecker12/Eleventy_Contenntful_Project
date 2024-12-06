@@ -1,0 +1,441 @@
+/* Sstyle.css */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #9D0208;
+    color: #6E1423;
+}
+
+
+header, footer {
+    background-color: #03071E;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+}
+
+header nav a {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase; 
+    text-decoration: none;
+
+}
+
+header nav a:hover {
+    background-color: #fff; 
+    color: #DC2F02;
+    text-decoration: none;
+}
+
+footer {
+    padding: 0.5rem 1rem; 
+    position: static; 
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; 
+}
+
+
+footer p {
+    margin: 0; 
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+
+main {
+    max-width: 1200px; 
+    margin: 2rem auto;
+    padding: 2rem; 
+    background-color: #f5f5f5; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+.outside-links {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.outside-links a {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFC300; 
+    padding: 10px 15px;
+    border: 2px solid #FFC300; 
+    border-radius: 5px;
+    margin: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.outside-links a:hover {
+    background-color: #FFC300;
+    color: #03071E; 
+}
+
+.outside-links p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+
+main p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.main-navigation {
+    text-align: center; 
+    margin: 1.5rem 0; 
+}
+
+.main-navigation a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+.main-navigation a:hover {
+    background-color: #0056b3;
+}
+
+.main-navigation a:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .main-navigation {
+        flex-direction: column;
+    }
+
+    .main-navigation a {
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+.markdown-content {
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    color: #333;
+}
+
+.markdown-content h1, 
+.markdown-content h2, 
+.markdown-content h3 {
+    color: #DC2F02; 
+}
+
+.markdown-content img {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+    margin: 1rem auto; 
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+    margin-left: 20px; 
+}
+
+.markdown-content p {
+    margin: 1rem 0; 
+}
+
+
+.post-list {
+    list-style-type: none;
+    margin: 1.5rem 0; 
+}
+
+.post-item {
+    margin: 0.5rem 0; 
+}
+
+.post-link {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.2rem; 
+    color: #007bff; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem; 
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.post-link:hover {
+    background-color: #007bff; 
+    color: white; 
+    border-color: #0056b3; 
+}
+
+
+.pagination {
+    text-align: center;
+    margin: 1rem 0; 
+}
+
+.pagination-link {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.1rem; 
+    color: #03071E; 
+    text-decoration: none; 
+    margin: 0 0.5rem; 
+    padding: 0.5rem 1rem; 
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.pagination-link:hover {
+    background-color: #007bff; 
+    color: white; 
+    border-color: #0056b3; 
+}
+
+
+@media (max-width: 768px) {
+    .post-link, .pagination-link {
+        font-size: 1rem; 
+    }
+}
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 10px;
+}
+
+.post-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.post-link:hover {
+  color: #007BFF;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: #007BFF;
+  margin: 0 5px;
+}
+
+.pagination-link:hover {
+  text-decoration: underline;
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 10px;
+}
+
+.post-link {
+  text-decoration: none; 
+  color: #FFFFFF; 
+  font-weight: bold;
+  font-size: 18px; 
+}
+
+.post-link:hover {
+  color: #007BFF; 
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination-link {
+  text-decoration: none; 
+  color: #FFFFFF; 
+  margin: 0 5px;
+  font-size: 16px; 
+}
+
+.pagination-link:hover {
+  color: #007BFF; 
+}
+
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .post-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 45%;
+    flex: 1;
+  }
+  
+  .post-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .post-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .pagination a:hover {
+    background-color: #0056b3;
+  }
+
+  .page-Number p {
+    color: white;
+    font-weight: bold;
+}
+
+.page-Number a {
+    color: gold;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.page-Number a:hover {
+    text-decoration: none;
+}
+
+.terms a {
+    color: gold;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.terms a:hover {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: darkred;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    background-color: #a30000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    
+}
+
+
+.blog-card {
+  display: flex;
+  flex-direction: column; /* Stack the cards vertically */
+  gap: 20px; /* Adds spacing between cards */
+  margin-top: 20px; /* Adds spacing at the top */
+}
+
+.post-card {
+  padding: 20px;
+  border: 1px solid #ddd; /* Optional: add a border to distinguish cards */
+  border-radius: 5px; /* Optional: round corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visuals */
+}

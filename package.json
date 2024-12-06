@@ -1,0 +1,22 @@
+{
+  "name": "assignment01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "contentful": "^11.2.2",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^17.0.0",
+    "markdown-it": "^14.1.0"
+  }
+}

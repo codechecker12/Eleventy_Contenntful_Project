@@ -1,0 +1,18 @@
+---
+    data: lab02
+    
+    alias: lab02
+    layout: "layout/default.liquid"
+---
+    
+  <div>
+    {% for lab02 in lab02 %}
+      <div>
+        <h2>{{ lab02.title }}</h2>
+        
+        <p>{{ lab02.content }}</p>
+        
+      </div>
+    {% endfor %}
+  </div>
+  
