@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="style" href="/css/style.css/">
+</head>
+<body>
+  
+  
+  <header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="blog/page/0">Blogs</a>
+    <a href="about/page/0">About</a>
+    <a href="/destinations">Destinations</a>
+    <a href="/labs">Labs</a>
+    <a href="/lab02">Lab-02</a>
+  </nav>
+  <link rel="stylesheet" href="/css/style.css">
+</header>
+
+  
+
+  <main>
+        
+  <div>
+    
+      <div>
+        <h2>Deliverable</h2>
+        
+        <p><p><b></b></p><p>This research paper explores three different templating languages: Nunjucks, Pug, and Mustache. We will discuss each one in-depth, providing an introduction, followed by the pros and cons of each. Finally, I will explain my choice for the assignment.</p><h3>1. Nunjucks</h3><p>Nunjucks is a full-featured templating language for JavaScript. It offers a powerful and flexible syntax, similar to Django templates, which makes it easier for developers familiar with that framework. Nunjucks allows for template inheritance, macros, and asynchronous control, making it a robust choice for complex projects.</p><h4>Pros:</h4><ul><li><p><b>Powerful and flexible</b>, offering features like template inheritance and custom filters.</p></li><li><p><b>Familiar syntax</b> for those who have worked with Django templates.</p></li><li><p><b>Highly extensible</b>, allowing custom filters and extensions.</p></li></ul><h4>Cons:</h4><ul><li><p><b>More complex</b> to set up and use compared to simpler templating engines.</p></li><li><p><b>May not be as fast</b> as some lighter templating engines.</p></li></ul><h3>2. Pug</h3><p>Pug, formerly known as Jade, is a templating engine that uses indentation and whitespace to simplify the syntax. This eliminates the need for closing tags, making the code more readable. Pug offers mixins and template inheritance, which makes it easy to reuse code and create modular templates.</p><h4>Pros:</h4><ul><li><p><b>Simplified syntax</b> makes code more readable and easier to maintain.</p></li><li><p><b>Powerful features</b> like conditional statements, loops, and template inheritance for reusability.</p></li></ul><h4>Cons:</h4><ul><li><p><b>Unique syntax</b> requires learning, which can be a barrier for some developers.</p></li><li><p><b>Error handling</b> can be challenging, with unclear stack traces during debugging.</p></li></ul><h3>3. Mustache</h3><p>Mustache is a logic-less templating engine, which means it keeps the templates clean and easy to read. It is language-agnostic, meaning it can be used with many programming languages, making it highly versatile. Mustache is lightweight and fast, suitable for both client-side and server-side rendering.</p><h4>Pros:</h4><ul><li><p><b>Logic-less nature</b> ensures clean and easy-to-read templates.</p></li><li><p><b>Language-agnostic</b>, making it versatile.</p></li><li><p><b>Lightweight and fast</b>, making it efficient for performance.</p></li></ul><h4>Cons:</h4><ul><li><p><b>Lacks support for logic constructs</b> such as if-else statements and loops, limiting versatility.</p></li><li><p><b>Complex tasks</b> require workarounds, which can complicate the code.</p></li></ul><h3>My Choice: Nunjucks</h3><p>I chose Nunjucks for my assignment because its syntax is easy to learn, making it accessible for beginners. Additionally, it offers powerful features like template inheritance and custom filters, which provide flexibility and robustness for complex projects.</p><h3>Next.js</h3><p>Next.js is a powerful React framework that allows for server-side rendering and static site generation. It offers high performance, SEO benefits, and a rich ecosystem.</p><h4>Pros:</h4><ul><li><p><b>Great Performance</b>: Next.js is known for its top-notch performance, thanks to features like automatic static optimization and server-side rendering.</p></li><li><p><b>Versatile</b>: It offers both static site generation and server-side rendering, giving you flexibility in how you build your site.</p></li><li><p><b>SEO Benefits</b>: Server-side rendering can help improve your site’s SEO by delivering fully rendered pages to search engines.</p></li><li><p><b>Rich Ecosystem</b>: There’s a robust ecosystem with plenty of plugins and integrations to extend functionality.</p></li></ul><h4>Cons:</h4><ul><li><p><b>Can Be Complex</b>: The flexibility and features can make it a bit complex, especially for beginners.</p></li><li><p><b>Longer Build Times</b>: For very large sites, build times can be longer compared to simpler static site generators.</p></li></ul><h3>Hugo</h3><p>Hugo is an open-source static site generator known for its blazing-fast build times and flexibility. It is especially suitable for large websites.</p><h4>Pros:</h4><ul><li><p><b>Super Fast</b>: Hugo is incredibly fast when it comes to build times, making it perfect for large sites.</p></li><li><p><b>User-Friendly</b>: It’s easy to set up and use, even if you’re new to static site generators.</p></li><li><p><b>Flexible</b>: Hugo supports multiple content types and taxonomies, making it versatile for different types of sites.</p></li><li><p><b>Strong Community</b>: There’s a strong community and extensive documentation to help you out.</p></li></ul><h4>Cons:</h4><ul><li><p><b>Fewer Plugins</b>: Compared to other static site generators like Next.js, Hugo has fewer plugins and integrations.</p></li><li><p><b>Learning Curve</b>: While it’s easy to get started, mastering Hugo’s templating system can take some time.</p></li></ul><h3>What is front matter? How does it relate to the web?</h3><p>Front matter is like a little info section at the top of Markdown files, where you can add details like the title, date, author, and tags. In web development, especially with static site generators like 11ty, it’s super handy for keeping things organized. It separates the content from the metadata, making it easier to manage and display everything on your website.</p><h3>Configuration Settings in 11ty</h3><h4>Current Settings</h4><ol><li><p><b>Passthrough Copy</b></p><ul><li><p><code>eleventyConfig.addPassthroughCopy(&quot;/src/css&quot;);</code></p></li><li><p><code>eleventyConfig.addPassthroughCopy(&quot;/src/img&quot;);</code></p></li><li><p><code>eleventyConfig.addPassthroughCopy(&quot;css&quot;);</code></p></li><li><p><b>Why</b>: This setting is super handy because it lets you copy files or directories directly to the output folder without processing them. It&#39;s perfect for assets like CSS, images, and other static files that don&#39;t need to be transformed by 11ty.</p></li></ul></li><li><p><b>Directory Configuration</b></p><ul><li><p><code>return { dir: { output: &quot;dist&quot;, input: &quot;src&quot; } };</code></p></li><li><p><b>Why</b>: This setting specifies the input and output directories for your project. The <code>input</code> directory is where 11ty looks for your source files, and the <code>output</code> directory is where the generated site will be placed. This helps keep your project organized by separating source files from the generated output.</p></li></ul></li></ol><h4>Additional Settings Worth Exploring</h4><ol><li><p><b>Includes Directory</b></p><ul><li><p><code>return { dir: { includes: &quot;_includes&quot; } };</code></p></li><li><p><b>Why</b>: The includes directory is meant for layouts, include files, extends files, partials, or macros. These files won&#39;t be processed as full template files but can be used by other templates. This can help you organize reusable components.</p></li></ul></li><li><p><b>Data Directory</b></p><ul><li><p><code>return { dir: { data: &quot;_data&quot; } };</code></p></li><li><p><b>Why</b>: The data directory is where you can store global data files that can be accessed in your templates. This is useful for managing site-wide data like navigation menus, site metadata, and more.</p></li></ul></li><li><p><b>Template Formats</b></p><ul><li><p><code>return { templateFormats: [&quot;njk&quot;, &quot;md&quot;, &quot;html&quot;] };</code></p></li><li><p><b>Why</b>: This setting defines which file formats 11ty will process. By specifying the formats, you ensure that only relevant files are included in the build, which can improve build performance and organization.</p></li></ul></li><li><p><b>Watch Targets</b></p><ul><li><p><code>eleventyConfig.addWatchTarget(&quot;./src/scss/&quot;);</code></p></li><li><p><b>Why</b>: This setting lets you specify additional files or directories for 11ty to watch for changes. Ensuring that changes to these files trigger a rebuild is helpful during development, especially for assets like SCSS files.</p></li></ul></li><li><p><b>Filters and Shortcodes</b></p><ul><li><p><code>eleventyConfig.addFilter(&quot;myFilter&quot;, function(value) { return value.toUpperCase(); });</code></p></li><li><p><b>Why</b>: Filters and shortcodes allow you to add custom processing logic to your templates. This can enhance the functionality of your site by enabling custom data manipulation and reusable template snippets.</p></li></ul></li></ol><h3>References</h3><ul><li><p>Mozilla. (n.d.). Nunjucks Features.</p></li><li><p>Zell Liew. (2016, January 20). Nunjucks with Gulp.</p></li><li><p>Pug. (n.d.). JavaScript Templating Engines: Pug.</p></li><li><p>SitePoint. (2015, October 5). Pug vs EJS.</p></li><li><p>Toptal. (n.d.). Pros and Cons of Popular JavaScript Templating Engines.</p></li><li><p>Mustache. (n.d.). Introduction to Mustache.</p></li><li><p>StackShare. (n.d.). Mustache - Reviews, Pros &amp; Cons.</p></li><li><p>DZone. (2017, March 14). FreeMarker vs Groovy vs Mustache vs Thymeleaf.</p></li><li><p>Inc, S. (n.d.). Front Matter: What it is and Why it is Important | Scribendi.</p></li><li><p>11ty. (n.d.). Eleventy Documentation: Configuration.</p></li></ul><p></p></p>
+        
+      </div>
+    
+  </div>
+  
+   
+    
+  </main>
+  
+
+  <footer>
+  <p>&copy; <span id="current-year"></span> Pratham Patel. All Rights Reserved.</p>
+  <nav class="terms">
+    <a href="/terms_and_conditions">Terms and Conditions</a>
+  </nav>
+  <link rel="stylesheet" href="/css/style.css">
+</footer>
+
+<script>
+  // JavaScript to get the current year and set it in the footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+</html>
