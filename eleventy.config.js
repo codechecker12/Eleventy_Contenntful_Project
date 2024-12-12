@@ -42,7 +42,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
 
-  eleventyConfig.addGlobalData("baseurl", "/Eleventy_Contentful_Project");  
+  eleventyConfig.addGlobalData("pathPrefix", "/Eleventy_Contentful_Project");
   eleventyConfig.addWatchTarget("src/css");
 
   
