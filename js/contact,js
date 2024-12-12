@@ -1,0 +1,34 @@
+// /js/contact.js
+document.getElementById('contactForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const form = event.target;
+  const spinner = document.getElementById('spinner');
+  const responseMessage = document.getElementById('responseMessage');
+
+  spinner.style.display = 'block';
+  form.style.display = 'none';
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    responseMessage.textContent = response.ok
+      ? 'Thanks for reaching out. We’ll get back to you soon!'
+      : `Error: ${result.message}`;
+  } catch (error) {
+    responseMessage.textContent = `Error: ${error.message}`;
+  } finally {
+    spinner.style.display = 'none';
+    responseMessage.style.display = 'block';
+  }
+});
